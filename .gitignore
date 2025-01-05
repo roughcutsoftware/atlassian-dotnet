@@ -397,4 +397,11 @@ FodyWeavers.xsd
 *.msp
 
 # JetBrains Rider
-*.sln.iml
+*.sln.iml   
+
+# important excludes
+/src/Roughcut.Atlassian.ClientServices/.secrets/secrets.jira-rcs.txt
+/src/Roughcut.Atlassian.Interfaces/TestCases/JiraProject.KBGL.json
+/src/Roughcut.Atlassian.Interfaces/TestCases/createmeta.json
+/src/Roughcut.Atlassian.Mvc.Web/appsettings.json
+/src/Roughcut.Atlassian.ClientServices/.secrets/secrets.jira-rcs.txt

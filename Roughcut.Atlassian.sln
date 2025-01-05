@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10-Core", "10-Core", "{5172ABBD-21CE-473E-9619-11AC6C007FD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Roughcut.Atlassian.Interfaces", "src\Roughcut.Atlassian.Interfaces\Roughcut.Atlassian.Interfaces.csproj", "{7E1C9D12-E53B-4090-8A45-305E213DC450}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roughcut.Atlassian.ClientServices", "src\Roughcut.Atlassian.ClientServices\Roughcut.Atlassian.ClientServices.csproj", "{69B4D26B-D85E-43BE-BA99-36ADBF94CF26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roughcut.Atlassian.DataStorage", "src\Roughcut.Atlassian.DataStorage\Roughcut.Atlassian.DataStorage.csproj", "{2DF70E03-55B6-4845-B616-707CD1012F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roughcut.Atlassian.Mvc.Web", "src\Roughcut.Atlassian.Mvc.Web\Roughcut.Atlassian.Mvc.Web.csproj", "{891342DA-A47D-4DF4-BFFF-77F91FE14847}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "30-Infrastructure", "30-Infrastructure", "{61ADADBB-6AC6-4709-BC76-4C7C98FC0252}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "50-ClientServices", "50-ClientServices", "{37C84015-91A8-4840-83F6-E1EDA375E5A6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "70-ClientUIs", "70-ClientUIs", "{61F92276-CFF1-494D-9FAD-C6052A3FEC29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Docs", "02-Docs", "{097035B7-4DE5-440D-AF96-78FCA1676E69}"
+	ProjectSection(SolutionItems) = preProject
+		docs\0100-git-down-up-overview.drawio = docs\0100-git-down-up-overview.drawio
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{705778D1-5640-4BD7-AE48-E2B8CA947646}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roughcut.Atlassian.ClientServices.Tests", "tests\Roughcut.Atlassian.ClientServices.Tests\Roughcut.Atlassian.ClientServices.Tests.csproj", "{BBE2726D-FE6F-44FA-9F57-86319318ECCD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roughcut.Atlassian.Integration.Tests", "tests\Roughcut.Atlassian.Infrastructure.Tests\Roughcut.Atlassian.Integration.Tests.csproj", "{39E548F8-0D28-47CC-A90E-B039B537AED7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "60-Testing", "60-Testing", "{E1770BE4-CBA7-4DF4-8C36-309DF8FDDA66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E1C9D12-E53B-4090-8A45-305E213DC450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E1C9D12-E53B-4090-8A45-305E213DC450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E1C9D12-E53B-4090-8A45-305E213DC450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E1C9D12-E53B-4090-8A45-305E213DC450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69B4D26B-D85E-43BE-BA99-36ADBF94CF26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69B4D26B-D85E-43BE-BA99-36ADBF94CF26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69B4D26B-D85E-43BE-BA99-36ADBF94CF26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69B4D26B-D85E-43BE-BA99-36ADBF94CF26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DF70E03-55B6-4845-B616-707CD1012F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DF70E03-55B6-4845-B616-707CD1012F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DF70E03-55B6-4845-B616-707CD1012F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DF70E03-55B6-4845-B616-707CD1012F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{891342DA-A47D-4DF4-BFFF-77F91FE14847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{891342DA-A47D-4DF4-BFFF-77F91FE14847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{891342DA-A47D-4DF4-BFFF-77F91FE14847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{891342DA-A47D-4DF4-BFFF-77F91FE14847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE2726D-FE6F-44FA-9F57-86319318ECCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE2726D-FE6F-44FA-9F57-86319318ECCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE2726D-FE6F-44FA-9F57-86319318ECCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE2726D-FE6F-44FA-9F57-86319318ECCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E548F8-0D28-47CC-A90E-B039B537AED7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E548F8-0D28-47CC-A90E-B039B537AED7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E548F8-0D28-47CC-A90E-B039B537AED7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E548F8-0D28-47CC-A90E-B039B537AED7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7E1C9D12-E53B-4090-8A45-305E213DC450} = {5172ABBD-21CE-473E-9619-11AC6C007FD7}
+		{69B4D26B-D85E-43BE-BA99-36ADBF94CF26} = {37C84015-91A8-4840-83F6-E1EDA375E5A6}
+		{2DF70E03-55B6-4845-B616-707CD1012F96} = {61ADADBB-6AC6-4709-BC76-4C7C98FC0252}
+		{891342DA-A47D-4DF4-BFFF-77F91FE14847} = {61F92276-CFF1-494D-9FAD-C6052A3FEC29}
+		{BBE2726D-FE6F-44FA-9F57-86319318ECCD} = {37C84015-91A8-4840-83F6-E1EDA375E5A6}
+		{39E548F8-0D28-47CC-A90E-B039B537AED7} = {E1770BE4-CBA7-4DF4-8C36-309DF8FDDA66}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC15CF02-A6A7-43A8-888D-1557ADD6FB30}
+	EndGlobalSection
+EndGlobal
