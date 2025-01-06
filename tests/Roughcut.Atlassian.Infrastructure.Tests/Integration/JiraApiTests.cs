@@ -19,6 +19,19 @@ namespace Roughcut.Atlassian.Integration.Tests.Integration
         {
         }
 
+        [TestCase("KBGL")]
+        public void Should_TestProjectDirectory(string projectKey)
+        {
+            string testingDirectory = Testing.TestingDirectory();
+
+            string jiraItemJsonFile = $"JiraProject.{projectKey}.json";
+
+            string jiraArtifactFullPath = Testing.TestingDirectory + jiraItemJsonFile;
+
+
+            var path = Path.Combine(Testing.TestingDirectory(), "TestCases", jiraItemJsonFile);
+        }
+
         [TestCase]
         public async Task Should_GetAndStoreProtos()
         {
@@ -99,7 +112,7 @@ namespace Roughcut.Atlassian.Integration.Tests.Integration
 
             string jiraArtifactFullPath = Testing.TestingDirectory + jiraItemJsonFile;
 
-            var path = Path.Combine(Testing.TestingDirectory, "TestCases", jiraItemJsonFile);
+            var path = Path.Combine(Testing.TestingDirectory(), "TestCases", jiraItemJsonFile);
 
             // write to file
             await File.WriteAllTextAsync(jiraArtifactFullPath, json);

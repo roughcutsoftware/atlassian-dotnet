@@ -42,7 +42,7 @@ namespace Roughcut.Atlassian.ClientServices.Services
 
         protected Uri BaseUri;
 
-        public JiraService(string baseUrl) : base(baseUrl)
+        public JiraService(string baseUrl, string userName = "admin", string password = "admin") : base(baseUrl)
         {
             //string uri = Environment.GetEnvironmentVariable("JIRA_BASE_URL");
             //if (string.IsNullOrEmpty(uri))
@@ -69,7 +69,7 @@ namespace Roughcut.Atlassian.ClientServices.Services
             // get the password from the secrets file - this is a security risk
             // move this to a secure location - use Azure Key Vault, AWS Secrets Manager, or GCP Secret Manager
             // secrets.jira-apikey-placeholder.txt is a placeholder file
-            string password = File.ReadAllText(@"C:\repos\RoughcutSoftware\atlassian-dotnet\src\Roughcut.Atlassian.ClientServices\.secrets\secrets.jira-rcs.txt");
+            //string password = File.ReadAllText(@"C:\repos\RoughcutSoftware\atlassian-dotnet\src\Roughcut.Atlassian.ClientServices\.secrets\secrets.jira-rcs.txt");
 
             // 
             if (string.IsNullOrEmpty(password))

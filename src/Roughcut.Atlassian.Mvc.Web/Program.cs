@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Roughcut.Atlassian.Mvc.Web.Data;
+using Roughcut.Atlassian.Interfaces.AppConfig;
+using Roughcut.Atlassian.Interfaces.Services;
+//using Roughcut.Atlassian.Mvc.Web.Data;
 
 namespace Roughcut.Atlassian.Mvc.Web
 {
@@ -12,13 +14,26 @@ namespace Roughcut.Atlassian.Mvc.Web
 
             // Add services to the container.
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionString));
+
+            ////
+            //builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            //    options.UseSqlServer(connectionString));
+
+            ////
+            //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            //
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            // add razor pages
+            builder.Services.AddRazorPages();
+
+            //
             builder.Services.AddControllersWithViews();
+
+            // add secrets service
+            builder.Services.AddSingleton<SecretsService>();
 
             var app = builder.Build();
 

@@ -12,9 +12,9 @@ using Newtonsoft.Json;
 
 namespace Roughcut.Atlassian.ClientServices.Tests.Units
 {
-    public class IssuesServiceTests
+    public class JiraIssueServiceTests
     {
-        public IssuesServiceTests() { }
+        public JiraIssueServiceTests() { }
 
         [TestCase("KBGL", 10003)]
         public async Task Should_CreateNewIssueForProject(string projectKey, long issueTypeId)

@@ -1,13 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>aspnet-Roughcut.Atlassian.Mvc.Web-cb6f6862-7bdb-443a-a844-ea0b35786872</UserSecretsId>
+    <!--
+    <UserSecretsId>cerebral-skyz-user-secrets</UserSecretsId>
+    -->
+    <UserSecretsId>atlassian-dotnet-user-secrets</UserSecretsId>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\**" />
+    <Content Remove="Data\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <EntityDeploy Remove="Data\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.10" />
@@ -16,12 +27,25 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="8.0.0" />
+    <!-- 
+     mock data generates for testing/pocs purposes
+    -->
+    <PackageReference Include="Bogus" Version="35.4.0" />
+    <PackageReference Include="NBuilder" Version="6.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Roughcut.Atlassian.ClientServices\Roughcut.Atlassian.ClientServices.csproj" />
     <ProjectReference Include="..\Roughcut.Atlassian.DataStorage\Roughcut.Atlassian.DataStorage.csproj" />
     <ProjectReference Include="..\Roughcut.Atlassian.Interfaces\Roughcut.Atlassian.Interfaces.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Development.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
